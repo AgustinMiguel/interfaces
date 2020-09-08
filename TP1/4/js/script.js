@@ -1,11 +1,14 @@
 let ctx = document.querySelector("#canvas").getContext("2d");
 let imageData = ctx.createImageData(canvas.width,canvas.height);
-for(let x = 0; x < imageData.width; x++){
-  for(let y = 0; y < imageData.height; y++){
-      setPixel(imageData, x, y, 0, 0, 0, 255);
+let color = imageData;
+for(let i = 0; i < imageData.width; i++){
+  for(let j = 0; j < imageData.height; j++){
+    color.r = j/imageData.height * 255;
+    color.g = j/imageData.height * 255;
+    color.b = j/imageData.height * 255;
+    setPixel(imageData, i, j , color.r, color.g, color.b, 255);
   }
 }
-
 ctx.putImageData(imageData, 0, 0);
 function setPixel(imageData,x , y, r, g, b, a){
   let index = (x + y * imageData.width) * 4;
@@ -14,4 +17,3 @@ function setPixel(imageData,x , y, r, g, b, a){
   imageData.data[index+2] = b;
   imageData.data[index+3] = a;
 }
-//HACER DEGRADE COMO DIERON EN LA CLASE, NO USAR COLORSTOP POR AHORA.

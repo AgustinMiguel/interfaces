@@ -1,0 +1,23 @@
+.Paint{
+    border: 5px solid rgb(93, 92, 92);
+    margin-left: auto;
+    margin-right: auto;
+}
+.Canvas{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Button{
+    margin :auto;
+    margin-left: 165px;
+    padding: 10px;
+    width: 50%;
+}
+
+.Text{
+    margin: auto;
+    margin-left: 200px;
+    padding: 10px;
+    width: 50%;
+}

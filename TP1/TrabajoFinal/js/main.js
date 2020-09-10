@@ -25,6 +25,7 @@ document.querySelector("#buttonNegative").addEventListener("click", getNegativeF
 document.querySelector("#buttonBrightness").addEventListener("click", getBrightnessFilter);
 document.querySelector("#buttonBlur").addEventListener("click", blurFilter);
 document.querySelector("#buttonClear").addEventListener("click", clearCanvas);
+document.querySelector("#buttonSaturacion").addEventListener("click", getSaturation);
 document.querySelector("#buttonPencil").addEventListener("click", function () { //EVENTO PARA SWITCHEAR EL LAPIZ
         if (pencil) {
                 pencil = false;
@@ -86,6 +87,9 @@ function clearCanvas() {
         eraser = false;
         color = "#000000";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.rect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "rgba(255,255,255,1)";
+        ctx.fill();
 }
 
 function mouseClick() {                 //FUNCION PARA COMENZAR A PINTAR EN EL CANVAS
@@ -262,4 +266,76 @@ function promedioMatriz(imageData, x, y, matriz, r, g, b, index) {
         imageData.data[index + 1] = g;
         imageData.data[index + 2] = b;
 }
+
+function getSaturation() {
+        let index;
+        let imageData = ctx.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
+
+        for (let x = 0; x < imageData.width; x++) {
+                for (let y = 0; y < imageData.height; y++) {
+                        index = (x + y * imageData.width) * 4;
+                       let  r = getRed(imageData, x, y);
+                       let g = getGreen(imageData, x, y);
+                       let b = getBlue(imageData, x, y);
+                        let a = rgbToHsl(r, g, b);
+                        a[1] = 2;
+                        let p = hslToRgb(a[0],a[1],a[2]);
+                        imageData.data[index + 0] = p[0]; //RED
+                        imageData.data[index + 1] = p[1]; //GREEN
+                        imageData.data[index + 2] = p[2]; //BLUE
+                }
+        }
+        ctx.putImageData(imageData, 0, 0);
+}
+
+function rgbToHsl(r, g, b) {
+        r /= 255, g /= 255, b /= 255;
+
+        let max = Math.max(r, g, b), min = Math.min(r, g, b);
+        let h, s, l = (max + min) / 2;
+
+        if (max == min) {
+                h = s = 0;
+        } else {
+                let d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+                switch (max) {
+                        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                        case g: h = (b - r) / d + 2; break;
+                        case b: h = (r - g) / d + 4; break;
+                }
+
+                h /= 6;
+        }
+
+        return [h, s, l];
+}
+
+function hslToRgb(h, s, l) {
+        let r, g, b;
+
+        if (s == 0) {
+                r = g = b = l; // achromatic
+        } else {
+                function hue2rgb(p, q, t) {
+                        if (t < 0) t += 1;
+                        if (t > 1) t -= 1;
+                        if (t < 1 / 6) return p + (q - p) * 6 * t;
+                        if (t < 1 / 2) return q;
+                        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+                        return p;
+                }
+
+                let q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                let p = 2 * l - q;
+
+                r = hue2rgb(p, q, h + 1 / 3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1 / 3);
+        }
+
+        return [r * 255, g * 255, b * 255];
+}
+
 

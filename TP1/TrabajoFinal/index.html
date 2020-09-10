@@ -1,0 +1,56 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>PAINT</title>
+</head>
+
+<body>
+	<div class="BackGraund">
+		<div style="display:inline-flex;">
+			<div>
+				<canvas id="canvas" class="Paint" width="600" height="400">
+			</div>
+			<div>
+				<div class="Text">
+					<strong>EL MENOS PAINT</strong>
+				</div>
+				<div class="Buttons">
+					<button class="Button" id="buttonPencil" type="button">Lapiz</button>
+					<button class="Button" id="buttonEraser" type="button">Goma</button>
+					<button class="Button" id="buttonClear" type="button">Nuevo</button>
+					<input class="Button" id="colorPicker" type="color">
+					<div>
+						<button class="Button" onclick="document.querySelector('.inputFile').click()">Elegir
+							Archivo</button>
+						<button class="Button" id="buttonSave" type="button">Guardar</button>
+						<input class="inputFile" type="file" style="display: none;">
+					</div>
+					<div>
+						<button class="Button" id="buttonBinary" type="button">Filtro Binario</button>
+						<button class="Button" id="buttonSepia" type="button">Filtro Sepia</button>
+						<button class="Button" id="buttonNegative" type="button">Filtro Negativo</button>
+						<button class="Button" id="buttonBrightness" type="button">Filtro de Brillo</button>
+						<button class="Button" id="buttonBlur" type="button">Filtro Blur</button>
+						<button class="Button" id="buttonSaturacion" type="button"> Filtro Saturacion</button>
+						<button class="Button" id="buttonRemoveFilters" type="button">Quitar filtros</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="Text">
+			<strong>MANUAL</strong>
+			<li>El boton nuevo sirve para borrar todo tu trabajo.</li>
+			<li>Si seleccionamos lapiz hay que volver a seleccionarlo para dejar de usarlo, igual con la goma.</li>
+			<li>Solo el lapiz tiene color.</li>
+			<li>Los filtros son acumulativos.</li>
+			<li>Se puede guardar todo tu proyecto, incluyendo dibujos!</li>
+		</div>
+	</div>
+</body>
+<script src="js/main.js"></script>
+</html>

@@ -20,9 +20,20 @@ class Board {
             }
             square = this.board[x][0];
             let pointToInsert = square.getPosition();
-            pointToInsert.x = pointToInsert.x + 50 ;
-            pointToInsert.y =  pointToInsert.y - 30;
+            pointToInsert.x = pointToInsert.x + 50;
+            pointToInsert.y = pointToInsert.y - 30;
             this.insertsPoints[x] = pointToInsert;
+        }
+    }
+
+    drawBoard() {
+        this.clearCanvas();
+        let square;
+        for (let x = 0; x < this.i; x++) {
+            for (let y = 0; y < this.j; y++) {
+                square = this.board[x][y];
+                square.addImage();
+            }
         }
     }
 
@@ -37,27 +48,47 @@ class Board {
         return this.insertsPoints;
     }
 
-    
+
     onPositionToInsert(coin) {
         for (let i = 0; i < this.insertsPoints.length; i++) {
             let position = this.insertsPoints[i];
-            if(coin.isPointInside(position.x, position.y)){
+            if (coin.isPointInside(position.x, position.y)) {
                 return i;
             }
         }
         return null;
     }
 
-
-    resolveMove(coin) {
-        let position = this.onPositionToInsert(coin);
-        if(position === null){
-            return false;
-        }else{
-            console.log("ADENTRO PUTO");
-            return true;
+    insertInBoard(x) {
+        let square = new Square();
+        for (let y = 0; y < this.j; y++) {
+            square = this.board[x][y];
+            if (square.getStatus() === true) {
+                if (y - 1 < 0) {
+                    return
+                } else {
+                    square = this.board[x][y - 1];
+                    square.setStatus(true);
+                    return;
+                }
+            } else {
+                if (y === this.j - 1) {
+                    square = this.board[x][y];
+                    square.setStatus(true);
+                    return;
+                }
+            }
         }
     }
 
+    resolveMove(coin) {
+        let position = this.onPositionToInsert(coin);
+        if (position === null) {
+            return false;
+        } else {
+            this.insertInBoard(position);
+            return;                                 //////////ACA TENGO QUE METERLO A LA MATRIZ
+        }
+    }
 }
 

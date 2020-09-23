@@ -3,6 +3,7 @@ class Square {
         this.context = context;
         this.posX = posX;
         this.posY = posY;
+        this.status = false;
     }
 
     draw() {
@@ -11,10 +12,14 @@ class Square {
         this.context.stroke();
     }
 
-    addImage(posX, posY) {
+    addImage() {
         let img = new Image();
-        img.src = "./images/tableroVacio.png";
-        context.drawImage(img, posX, posY);
+        if(this.status === false){        
+            img.src = "./images/tableroVacio.png";
+        }else{
+            img.src = "./images/tableroUsado.png";
+        }
+        context.drawImage(img, this.posX, this.posY);
     }
 
     setPosition(x, y) {
@@ -27,5 +32,13 @@ class Square {
             x: this.posX,
             y: this.posY
         };
+    }
+
+    getStatus(){
+        return this.status;
+    }
+
+    setStatus(status){
+        this.status = status;
     }
 }

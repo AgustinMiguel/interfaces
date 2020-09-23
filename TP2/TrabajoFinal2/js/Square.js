@@ -11,11 +11,21 @@ class Square {
         this.context.stroke();
     }
 
-    addImage(posX, posY){
+    addImage(posX, posY) {
         let img = new Image();
         img.src = "./images/tableroVacio.png";
-        img.onload = function(){
-            context.drawImage(img,posX,posY);
-        }
+        context.drawImage(img, posX, posY);
+    }
+
+    setPosition(x, y) {
+        this.posX = x;
+        this.posY = y;
+    }
+
+    getPosition() {
+        return {
+            x: this.posX,
+            y: this.posY
+        };
     }
 }

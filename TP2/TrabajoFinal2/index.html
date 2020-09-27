@@ -9,11 +9,36 @@
 </head>
 
 <body>
-    <canvas id="canvas" class="Paint" width="1300" height="900"></canvas>
+    <div>
+        <div>
+            <canvas id="canvas" class="Paint" width="1300" height="900"></canvas>
+        </div>
+        <div>
+            <button id="buttonRestart" class="Button">Restart</button>
+        </div>
+    </div>
+    <div id="redMessage" class="Hidden">
+        <h2>GANO EL JUGADOR ROJO</h2>
+    </div>
+    <div id="blueMessage" class="Hidden">
+        <h2>GANO EL JUGADOR AZUL</h2>
+    </div>
+    <div id="drawMessage" class="Hidden">
+        <h2>EMPATE!</h2>
+    </div>
+    <div class="Hidden">
+        <img src="./images/tableroRojo.png" alt="" id="tableroRojo">
+        <img src="./images/tableroAzul.png" alt="" id="tableroAzul">
+        <img src="./images/tableroVacio.png" alt="" id="tableroVacio">
+        <img src="./images/FichaRoja.png" alt="" id="fichaRoja">
+        <img src="./images/FichaAzul.png" alt="" id="fichaAzul">
+    </div>
 </body>
 <script src="js/Coin.js"></script>
+<script src="js/Player.js"></script>
 <script src="js/Square.js"></script>
 <script src="js/Board.js"></script>
 <script src="js/Game.js"></script>
+
 
 </html>

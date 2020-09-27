@@ -9,14 +9,16 @@ class Board {
 
     createBoard() {
         let square;
+        let id = 0;
         for (let x = 0; x < this.i; x++) {
             this.board[x] = [];
             for (let y = 0; y < this.j; y++) {
                 let posX = (x * 100) + 270;
                 let posY = (y * 100) + 90;
-                square = new Square(this.context, posX, posY);
+                square = new Square(id, this.context, posX, posY);
                 square.addImage(posX, posY);
                 this.board[x][y] = square;
+                id = id + 1;
             }
             square = this.board[x][0];
             let pointToInsert = square.getPosition();
@@ -26,8 +28,17 @@ class Board {
         }
     }
 
+    resetBoard() {
+        for (let x = 0; x < this.i; x++) {
+            for (let y = 0; y < this.j; y++) {
+                let square = this.board[x][y];
+                square.setStatus = "false";
+                this.board[x][y] = square;
+            }
+        }
+    }
+
     drawBoard() {
-        this.clearCanvas();
         let square;
         for (let x = 0; x < this.i; x++) {
             for (let y = 0; y < this.j; y++) {
@@ -59,22 +70,22 @@ class Board {
         return null;
     }
 
-    insertInBoard(x) {
+    insertInBoard(x, coin) {                 //RECORRO LA MATRIZ SOLO POR EL EJE Y PORQUE YA SE LA POSICION DEL X
         let square = new Square();
         for (let y = 0; y < this.j; y++) {
             square = this.board[x][y];
-            if (square.getStatus() === true) {
+            if (square.getStatus() !== false) {
                 if (y - 1 < 0) {
                     return
                 } else {
                     square = this.board[x][y - 1];
-                    square.setStatus(true);
+                    square.setStatus(coin.getColor());
                     return;
                 }
             } else {
                 if (y === this.j - 1) {
                     square = this.board[x][y];
-                    square.setStatus(true);
+                    square.setStatus(coin.getColor());
                     return;
                 }
             }
@@ -86,8 +97,126 @@ class Board {
         if (position === null) {
             return false;
         } else {
-            this.insertInBoard(position);
-            return;                                 //////////ACA TENGO QUE METERLO A LA MATRIZ
+            this.insertInBoard(position, coin);
+            return true;                                 //////////ACA TENGO QUE METERLO A LA MATRIZ
+        }
+    }
+
+    checkPlay(color) {
+        let square = new Square();
+        for (let x = this.i - 1; x > -1; x--) {
+            for (let y = 0; y < this.j; y++) {
+                let counter = 0;
+                square = this.board[x][y];
+                if (square.getStatus() === color) {
+                    counter = this.checkUp(color, x, y);
+                    if (counter === 4) {
+                        return true;
+                    }
+                    counter = this.checkLeft(color, x, y);
+                    if (counter === 4) {
+                        return true;
+                    }
+                    counter = this.checkRight(color, x, y);
+                    if (counter === 4) {
+                        return true;
+                    }
+                    counter = this.checkLeftDiagonal(color, x, y);
+                    if (counter === 4) {
+                        return true;
+                    }
+                    counter = this.checkRigthDiagonal(color, x, y);
+                    if (counter === 4) {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+
+    checkUp(color, x, y) {
+        let counter = 0;
+        while (counter < 5 && y > -1) {
+            let square = this.board[x][y];
+            if (square.getStatus() === color) {
+                counter++;
+                y--;
+            } else {
+                return 0;
+            }
+            if (counter === 4) {
+                return counter;
+            }
+        }
+    }
+
+    checkLeft(color, x, y) {
+        let counter = 0;
+        while (counter < 5 && x > -1) {
+            let square = this.board[x][y];
+            if (square.getStatus() === color) {
+                counter++;
+                x--;
+            } else {
+                return 0;
+            }
+            if (counter === 4) {
+                return counter;
+            }
+        }
+    }
+
+    checkRight(color, x, y) {
+        let counter = 0;
+        while (counter < 5 && x < this.i) {
+            let square = this.board[x][y];
+            if (square.getStatus() === color) {
+                counter++;
+                x++;
+            } else {
+                return 0;
+            }
+            if (counter === 4) {
+                return counter;
+            }
+        }
+    }
+
+
+
+    checkLeftDiagonal(color, x, y) {
+        let counter = 0;
+        while (counter < 5 && x > -1 && y > -1) {
+            let square = this.board[x][y];
+            if (square.getStatus() === color) {
+                counter++;
+                x--;
+                y--;
+            } else {
+                return 0;
+            }
+            if (counter === 4) {
+                return counter;
+            }
+        }
+    }
+
+
+    checkRigthDiagonal(color, x, y) {
+        let counter = 0;
+        while (counter < 5 && x < this.i && y > -1) {
+
+            let square = this.board[x][y];
+            if (square.getStatus() === color) {
+                counter++;
+                x++;
+                y--;
+            } else {
+                return 0;
+            }
+            if (counter === 4) {
+                return counter;
+            }
         }
     }
 }

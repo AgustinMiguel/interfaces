@@ -1,19 +1,24 @@
 class Coin {
-    constructor(id, context, posX, posY) {
+    constructor(id, context, posX, posY, color ) {
         this.id = id;
         this.context = context;
         this.posX = posX;
         this.posY = posY;
+        this.color = color;
     }
 
-    drawCoin() {
+    drawCoin(color) {
+        let imgSize = 100;
         context.beginPath();
         let img = new Image();
-        img.src = "./images/FichaVioleta.png"
-        let imgSize = 270;
-        context.drawImage(img, this.posX - (imgSize / 2), this.posY - (imgSize / 2), imgSize, imgSize);
+        if (color === "rojo") {
+            context.drawImage(document.querySelector("#fichaRoja"), this.posX - (imgSize / 2), this.posY - (imgSize / 2), imgSize, imgSize);
+        } else {
+            if (color === "azul")
+            context.drawImage(document.querySelector("#fichaAzul"), this.posX - (imgSize / 2), this.posY - (imgSize / 2), imgSize, imgSize);
+        }
         context.stroke();
-        this.context.closePath();
+        context.closePath();
     }
 
     isPointInside(posX, posY) {
@@ -32,5 +37,12 @@ class Coin {
             x: this.posX,
             y: this.posY
         };
+    }
+
+    getColor(){
+        return this.color;
+    }
+    getId(){
+        return this.id;
     }
 }

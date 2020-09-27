@@ -1,9 +1,10 @@
 class Square {
-    constructor(context, posX, posY) {
+    constructor(id,context, posX, posY) {
         this.context = context;
         this.posX = posX;
         this.posY = posY;
         this.status = false;
+        this.id = id;
     }
 
     draw() {
@@ -14,12 +15,17 @@ class Square {
 
     addImage() {
         let img = new Image();
-        if(this.status === false){        
-            img.src = "./images/tableroVacio.png";
+        if(this.status == false){        
+            context.drawImage(document.querySelector("#tableroVacio"), this.posX, this.posY);
         }else{
-            img.src = "./images/tableroUsado.png";
+            if(this.status === "rojo"){
+                context.drawImage(document.querySelector("#tableroRojo"), this.posX, this.posY);
+            }else{
+                if(this.status ==="azul"){
+                    context.drawImage(document.querySelector("#tableroAzul"), this.posX, this.posY);
+                }
+            }
         }
-        context.drawImage(img, this.posX, this.posY);
     }
 
     setPosition(x, y) {

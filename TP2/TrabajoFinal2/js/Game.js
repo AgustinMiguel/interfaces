@@ -144,7 +144,9 @@ function deleteCoin(lastClickedFigure) {
         }
     }
 }
+
 function restart() {
+    clearCanvas();
     board.createBoard();
     player1.createCoins();
     player2.createCoins();
@@ -157,7 +159,6 @@ function restart() {
     document.querySelector("#turnPlayerBlue").className = "Hidden";
     turn = player1;
     moves = 0;
-
 }
 document.querySelector("#buttonRestart").addEventListener("click", restart);
 

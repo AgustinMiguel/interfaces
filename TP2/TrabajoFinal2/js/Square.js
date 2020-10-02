@@ -1,5 +1,5 @@
 class Square {
-    constructor(id,context, posX, posY) {
+    constructor(id,context, posX, posY,status) {
         this.context = context;
         this.posX = posX;
         this.posY = posY;

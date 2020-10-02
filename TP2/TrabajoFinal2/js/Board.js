@@ -15,7 +15,7 @@ class Board {
             for (let y = 0; y < this.j; y++) {
                 let posX = (x * 100) + 270;
                 let posY = (y * 100) + 90;
-                square = new Square(id, this.context, posX, posY);
+                square = new Square(id, this.context, posX, posY,false);
                 square.addImage(posX, posY);
                 this.board[x][y] = square;
                 id = id + 1;

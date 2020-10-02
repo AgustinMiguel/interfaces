@@ -147,7 +147,7 @@ function deleteCoin(lastClickedFigure) {
 
 function restart() {
     clearCanvas();
-    board.createBoard();
+    board.resetBoard();
     player1.createCoins();
     player2.createCoins();
     document.querySelector("#blueMessage").className = "Hidden";

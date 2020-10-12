@@ -116,3 +116,102 @@
     }
 }
 
+.flip3D{
+    width: 240px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+.flip3D > .front{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    width: 240px; 
+    height: 200px; 
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flip3D > .back{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    width: 240px; height: 200px; border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flip3D:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.flip3D:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.flip3D > .back > img {
+        max-width: 240px;
+        max-height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
+.flip3D > .front > img {
+    max-width: 240px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip3Dcontainerhidden{
+    display: none;
+}
+
+.flip3Dcontainer{
+    display: inline;
+}
+
+.flip3Dcontainer > .flip3D{
+    animation: flip3D 3s ease-in;
+}
+
+@keyframes flip3D{
+    0%{
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.2;
+        transform: translateY(400px);
+    }
+    
+    50%{
+        opacity: 0.4;
+        transform: translateY(200px);
+    }
+    75%{
+        opacity: 0.6;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#bg{
+    position: absolute;
+    top: 1500;
+    width: 100%;
+    height: 100%;
+    background: url("../img/casavolando.png");
+    background-repeat: no-repeat;
+    background-position-x: 115%;
+}
+
+
+
+

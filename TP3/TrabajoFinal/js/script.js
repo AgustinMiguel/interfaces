@@ -12,8 +12,8 @@ window.addEventListener("scroll", function(){
 
 const bg =  document.querySelector("#bg");
 window.addEventListener("scroll", function(){
-    if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100){
-        bg.style.backgroundPosition = +window.pageYOffset+"px";
+    if (document.body.scrollTop > 20|| document.documentElement.scrollTop > 20){
+        bg.style.backgroundPosition = +window.pageYOffset+ 200 +"px";
     }  
 });
 

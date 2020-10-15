@@ -3,7 +3,7 @@ const loader = document.querySelector(".loader");
 setInterval(function(){
     web.className = "web";
     loader.className = "loaderHidden"
-}, 3000);
+}, 3);
 
 window.addEventListener("scroll", function(){
     if (document.body.scrollTop > 75|| document.documentElement.scrollTop > 75){

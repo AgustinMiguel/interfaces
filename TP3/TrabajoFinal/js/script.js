@@ -1,14 +1,19 @@
-
+const web = document.querySelector(".webHidden");
+const loader = document.querySelector(".loader");
+setInterval(function(){
+    web.className = "web";
+    loader.className = "loaderHidden"
+}, 3000);
 
 window.addEventListener("scroll", function(){
-    if (document.body.scrollTop > 80|| document.documentElement.scrollTop > 80){
+    if (document.body.scrollTop > 75|| document.documentElement.scrollTop > 75){
         document.querySelector("#flip3Dcontainer").className = "flip3Dcontainer";
     }  
 });
 
 const bg =  document.querySelector("#bg");
 window.addEventListener("scroll", function(){
-    if (document.body.scrollTop > 5|| document.documentElement.scrollTop > 5){
+    if (document.body.scrollTop > 75|| document.documentElement.scrollTop > 75){
         bg.style.backgroundPosition = +window.pageYOffset+ 200 +"px";
     }  
 });
@@ -25,7 +30,6 @@ const size = carruselImg[0].clientWidth;
 carruselSlide.style.transform = "translateX(" +(-size * counter) + "px"; //PARA COMENZAR EN LA PRIMER IMG DEL CARRUSEL
 
 nextBtn.addEventListener("click", function(){
-    console.log(carruselImg.length);
     if(counter === carruselImg.length -2){
         counter = 1;
     }

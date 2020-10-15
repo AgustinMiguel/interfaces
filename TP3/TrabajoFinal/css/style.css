@@ -74,57 +74,6 @@
     }
 }
 
-.buttons{
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav-item{
-  font-size: 15px;
-  padding: 0px 60px;
-  font-weight: bold;
-  
-}
-
-.navbarcontainterhidden{
-    display: none;
-}
-
-.navbarcontainter{
-    display: inline;
-}
-
-.navbarcontainter a{
-    animation: navbar 2s ease-in;
-}
-
-@keyframes navbar{
-    0%{
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-    25%{
-        opacity: 0.2;
-        transform: translateX(-100px);
-    }
-    
-    50%{
-        opacity: 0.4;
-        transform: translateX(0px);
-    }
-    75%{
-        opacity: 0.6;
-        transform: translateX(50px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
 .flip3D{
     width: 240px;
     height: 200px;
@@ -194,25 +143,25 @@
 
 @keyframes flip3D{
     0%{
-        transform: translateY(500px);
+        transform: translateX(-200px);
         opacity: 0;
     }
     25%{
         opacity: 0.2;
-        transform: translateY(400px);
+        transform: translateX(-100px);
     }
     
     50%{
         opacity: 0.4;
-        transform: translateY(200px);
+        transform: translateX(0px);
     }
     75%{
         opacity: 0.6;
-        transform: translateY(100px);
+        transform: translateX(50px);
     }
     100%{
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateX(0px);
     }
 }
 

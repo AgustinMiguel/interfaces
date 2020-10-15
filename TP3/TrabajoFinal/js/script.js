@@ -1,14 +1,14 @@
 
 
 window.addEventListener("scroll", function(){
-    if (document.body.scrollTop > 75|| document.documentElement.scrollTop > 75){
+    if (document.body.scrollTop > 80|| document.documentElement.scrollTop > 80){
         document.querySelector("#flip3Dcontainer").className = "flip3Dcontainer";
     }  
 });
 
 const bg =  document.querySelector("#bg");
 window.addEventListener("scroll", function(){
-    if (document.body.scrollTop > 20|| document.documentElement.scrollTop > 20){
+    if (document.body.scrollTop > 5|| document.documentElement.scrollTop > 5){
         bg.style.backgroundPosition = +window.pageYOffset+ 200 +"px";
     }  
 });

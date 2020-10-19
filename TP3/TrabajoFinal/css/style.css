@@ -7,6 +7,35 @@
     box-sizing: border-box;
 }
 
+.loader{
+    position: relative;
+    top: 0;
+    width:100% ;
+    height: 80vh;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLoader{
+    animation: house 3s ease infinite ;
+}
+ .h3loader{
+     display: flex;
+     left: 1%;
+ }
+.loaderHidden{
+    position: relative;
+    display: none;
+}
+.webHidden{
+    display: none;
+}
+.web{
+    display: initial;
+}
+
 .paralax{
     position: relative;
     min-height: 1000px;
@@ -168,11 +197,42 @@
 
 #bg{
     position: absolute;
-    top: 1200px;
+    top: 1300px;
     width: 100%;
     height: 90%;
     background: url("../img/casavolando.png");
     background-repeat: no-repeat;
+    z-index: -54;
+}
+
+#bg1{
+    position: absolute;
+    top: 1000px;
+    width: 100%;
+    height: 90%;
+    background: url("../img/dug.jpg");
+    background-repeat: no-repeat;
+    z-index: -54;
+}
+
+#bg2{
+    position: absolute;
+    top: 1600px;
+    width: 100%;
+    height: 90%;
+    background: url("../img/viejo2.png");
+    background-repeat: no-repeat;
+    z-index: -54;
+}
+
+#bg3{
+    position: absolute;
+    top: 1250px;
+    width: 100%;
+    height: 90%;
+    background: url("../img/nenene.jpg");
+    background-repeat: no-repeat;
+    z-index: -54;
 }
 
 .carrusel-container{
@@ -181,6 +241,7 @@
     margin: auto;
     border: 5px solid black;
     overflow: hidden;
+    animation: flip3D 3s ease-in;
 }
 
 .carrusel-slide{
@@ -194,6 +255,7 @@
     height: 500px;
 }
 
+
 #nextBtn{
     position: absolute;
     top: 80%;
@@ -203,6 +265,10 @@
     opacity: 0.5 ;
     cursor: pointer;
     z-index: 85;
+}
+
+#nextBtn:hover{
+    transform: scale(3);
 }
 
 #prevBtn{
@@ -216,7 +282,15 @@
     z-index: 85;
 }
 
+#prevBtn:hover{
+    transform: scale(3);
+}
+.textHidden{
+    display: none;
+}
 .text{
+    display: flex ;
+    animation: flip3D 3s ease-in;
     height: 50vh;
     width: 99vw;
     justify-content: center;
@@ -369,10 +443,14 @@
 .menu > div > div > ul > li > a:hover{
     color: yellow;
 }
-
+.acordionHidden{
+    display: none;
+}
 .acordion{
+    animation: flip3D 3s ease-in;
     width: 40vw;
     margin: 2rem auto;
+    display: flex;
 }
 
 .acordion-item{
@@ -432,7 +510,7 @@
 }
 
 .imgContainer:hover{
-    transform: perspective(500px) rotateY(20deg);
+    transform: perspective(800px) rotateY(20deg);
     transition: 0.3s;
 }
 
@@ -465,37 +543,6 @@
     transition: 1s ease-in;
 }
 
-.loader{
-    position: relative;
-    top: 0;
-    width:100% ;
-    height: 100vh;
-    background: cornflowerblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.imgLoader{
-    animation: house 3s ease infinite ;
-}
- .h3loader{
-     display: flex;
-     align-items: baseline;
-     left: 1%;
- }
-.loaderHidden{
-    position: relative;
-    display: none;
-}
-.webHidden{
-    display: none;
-}
-.web{
-    display: initial;
-}
-
-
 
 @keyframes house{
     0%{
@@ -513,4 +560,11 @@
     100%{
         transform: translateY(0px) translateX(200px);
     }
+}
+
+.imgPixar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55vw;
 }

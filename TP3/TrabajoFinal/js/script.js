@@ -17,8 +17,22 @@ setInterval(function(){
             document.querySelector("#carrusel-container").className = "carrusel-container";
         }
     });
+    const btnHome = document.querySelector(".btnHome");
+    const btnEventos = document.querySelector(".btnEventos");
+    const btnComentarios = document.querySelector(".btnComentarios");
 
-    
+    btnHome.addEventListener("click", function(){
+        window.scroll(0,300);
+    });
+
+    btnEventos.addEventListener("click", function(){
+        window.scroll(0,1700);
+    });
+
+    btnComentarios.addEventListener("click", function(){
+        window.scroll(0,1800);
+    });
+
     const bg =  document.querySelector("#bg");
     window.addEventListener("scroll", function(){
         if (document.body.scrollTop > 75|| document.documentElement.scrollTop > 75){
@@ -82,4 +96,7 @@ acordionItemsHeader.forEach(acordionItemsHeader => {
     });
 });
 
-   
+
+
+
+

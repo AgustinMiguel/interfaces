@@ -1,0 +1,54 @@
+body{
+    background-color: #000000;
+    margin: 0;
+}
+
+.flex-navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: #968ABB;
+    height: 12vh;
+    width: 99.9vw;
+ }
+ 
+ .flex-navbar div{
+     background-color: blanchedalmond;
+     width: 100px;
+     margin: 10px;
+     text-align: center;
+     line-height: 75px;
+     font-size: 30px;
+ }
+
+.flex-navbar-left{
+   display: flex;
+   flex-direction: column;
+   background-color: #333234;
+   height: 76vh;
+   width: 8vw;
+}
+
+.flex-navbar-left div{
+    background-color: blanchedalmond;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 74.8px;
+    font-size: 30px;
+}
+.flex-navbar-footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #968ABB;
+    height: 12vh;
+    width: 99.9vw;
+}
+
+.flex-navbar-footer div{
+    background-color: blanchedalmond;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}

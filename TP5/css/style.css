@@ -9,9 +9,19 @@ body{
     background-color: #968ABB;
     height: 12vh;
     width: 99.9vw;
+    justify-content: space-between;
+ }
+
+ .flex-items{
+    display: flex;
+    flex-direction: row;
+    background-color: #968ABB;
+    height: 12vh;
+    width: 99.9vw;
+    justify-content: flex-end;
  }
  
- .flex-navbar div{
+ .items{
      background-color: blanchedalmond;
      width: 100px;
      margin: 10px;
@@ -42,6 +52,7 @@ body{
     background-color: #968ABB;
     height: 12vh;
     width: 99.9vw;
+    justify-content: center;
 }
 
 .flex-navbar-footer div{

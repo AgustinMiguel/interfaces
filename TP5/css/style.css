@@ -2,7 +2,7 @@ body{
     background-color: #000000;
     margin: 0;
 }
-
+/*Barra de navegacion - footer*/
 .flex-navbar{
     display: flex;
     flex-direction: row;
@@ -11,8 +11,8 @@ body{
     width: 99.9vw;
     justify-content: space-between;
  }
-
- .flex-items{
+/*Items barra de navegacion*/
+ .flex-items-navbar{
     display: flex;
     flex-direction: row;
     background-color: #968ABB;
@@ -20,46 +20,55 @@ body{
     width: 99.9vw;
     justify-content: flex-end;
  }
- 
- .items{
-     background-color: blanchedalmond;
-     width: 100px;
-     margin: 10px;
-     text-align: center;
-     line-height: 75px;
-     font-size: 30px;
+/*Barra de navegacion lateral*/
+ .flex-navbar-left{
+    display: flex;
+    flex-direction: column;
+    background-color: #333234;
+    height: 75.6vh;
+    width: 8vw;
  }
-
-.flex-navbar-left{
-   display: flex;
-   flex-direction: column;
-   background-color: #333234;
-   height: 76vh;
-   width: 8vw;
-}
-
-.flex-navbar-left div{
-    background-color: blanchedalmond;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 74.8px;
-    font-size: 30px;
-}
-.flex-navbar-footer{
+/*Items barra del footer*/
+.flex-items-footer{
     display: flex;
     flex-direction: row;
     background-color: #968ABB;
-    height: 12vh;
-    width: 99.9vw;
-    justify-content: center;
-}
-
-.flex-navbar-footer div{
+ }
+/*Items*/
+ .items{
     background-color: blanchedalmond;
     width: 100px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+}
+
+.logo{
+    height: 90px;
+    width: 90px;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.playButton{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.nextButton{
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.backButton{
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding-top: 20px;
+    transform: rotate(180deg);
 }

@@ -72,3 +72,16 @@ body{
     padding-top: 20px;
     transform: rotate(180deg);
 }
+
+.backPage{
+    height: 30px;
+    width: 30px;
+    padding-top: 20px;
+    transform: rotate(180deg);
+}
+
+.nextPage{
+    height: 30px;
+    width: 30px;
+    padding-bottom: 20px;
+}

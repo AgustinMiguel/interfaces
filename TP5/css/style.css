@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: row;
     background-color: #968ABB;
-    height: 12vh;
+    height: 9vh;
     width: 99.9vw;
     justify-content: space-between;
  }
@@ -16,8 +16,6 @@ body{
     display: flex;
     flex-direction: row;
     background-color: #968ABB;
-    height: 12vh;
-    width: 99.9vw;
     justify-content: flex-end;
  }
 /*Barra de navegacion lateral*/
@@ -25,9 +23,28 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #333234;
-    height: 75.6vh;
+    height: 82vh;
     width: 8vw;
  }
+/*Tiems de navegacion lateral*/
+ .items-navbar-left{
+    font-family: 'Poppins';
+    color: blanchedalmond;
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 10px;
+    margin: 5px;
+}
+
+
+/*Lista de navegacion lateral*/
+.list-navbar-left{
+    padding-left: 5px;
+    margin-left: 15px;
+    margin-top:15px ;
+    font-size: 14px;
+}
+
 /*Items barra del footer*/
 .flex-items-footer{
     display: flex;
@@ -36,52 +53,84 @@ body{
  }
 /*Items*/
  .items{
-    background-color: blanchedalmond;
     width: 100px;
-    margin: 10px;
+    height: 50px;
+    color: blanchedalmond;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
 }
 
+
+
 .logo{
-    height: 90px;
-    width: 90px;
+    margin-top: 5px;
+    height: 60px;
+    width: 60px;
     padding: 5px;
     padding-left: 15px;
 }
 
 .playButton{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin: 10px;
     justify-content: center;
 }
 
 .nextButton{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     justify-content: center;
     padding-bottom: 20px;
 }
 
 .backButton{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     justify-content: center;
     padding-top: 20px;
     transform: rotate(180deg);
 }
-
+/*Buscarlos en color blanco*/
 .backPage{
     height: 30px;
     width: 30px;
-    padding-top: 20px;
     transform: rotate(180deg);
 }
-
+/*Buscarlos en color blanco*/
 .nextPage{
+    width: 0px;
+    margin-top: 10px;
+    color: blanchedalmond;
+    text-align: center;
+    line-height: 0px;
+    font-size: 30px;
     height: 30px;
     width: 30px;
-    padding-bottom: 20px;
+}
+.footer-player{
+
+}
+.footer-img{
+  margin-top: 18px ;
+  margin-left: 15px ;
+}
+
+.footer-track{
+    font-family: 'Poppins';
+    color: blanchedalmond;
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.footer-band{
+    font-family: 'Poppins';
+    color: blanchedalmond;
+    text-align: justify;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 5px;
 }

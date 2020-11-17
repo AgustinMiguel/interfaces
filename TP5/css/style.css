@@ -20,11 +20,13 @@ body{
  }
 /*Barra de navegacion lateral*/
  .flex-navbar-left{
+     margin-right: 0px;
     display: flex;
     flex-direction: column;
     background-color: #333234;
     height: 82vh;
     width: 8vw;
+    float: left;
  }
 /*Tiems de navegacion lateral*/
  .items-navbar-left{
@@ -53,8 +55,6 @@ body{
  }
 /*Items*/
  .items{
-    width: 100px;
-    height: 50px;
     color: blanchedalmond;
     text-align: center;
     line-height: 75px;
@@ -62,7 +62,12 @@ body{
 }
 
 
-
+.avatar{
+    margin-top: 25px;
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+}
 .logo{
     margin-top: 5px;
     height: 60px;
@@ -134,3 +139,34 @@ body{
     margin-top: 0px;
     margin-left: 5px;
 }
+
+/*slider*/
+.slider{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 90vw;
+    height: 300px;
+    overflow: hidden;
+ }
+ 
+ .slider-inner{
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 200%;
+     display: grid;
+     grid-template-columns: repeat(11,205px);
+     gap: 5px;
+     pointer-events: none;
+ }
+ 
+ .slider-img{
+     height: 200px;
+     width: 200px;
+ }
+ .slider-item{
+     height: 200px;
+     width: 200px;
+ }

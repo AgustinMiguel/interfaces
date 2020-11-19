@@ -1,8 +1,153 @@
-body{
-    background-color: #000000;
-    margin: 0;
+*{
+	margin:0px;
+	padding:0px;
+    box-sizing: border-box;
+    font-family:'Poppins';
+    color: white;
 }
-/*Barra de navegacion - footer*/
+
+
+.padre{
+	display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid black;
+}
+/*-----------------------------navbar-----------------------------*/
+.header{
+    background-color: #968ABB;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+    .logo{
+        flex: 1 1 10%;
+        
+    }
+    .logo img{
+        display: block;
+        height: 60px;
+        width: 60px;
+        margin-left: 5px;
+    }
+    .navbar{
+        flex: 10 1 90%;
+        display: flex;
+        flex-flow: row nowrap;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .navbar img{
+        margin-right: 15px;
+        height: 30px;
+        width: 30px;
+    }
+
+/*-----------------------------contenido y sidebar-----------------------------*/
+.main-section{
+    background: black;
+    display: flex;
+}
+    /*-----------------------------contenido-----------------------------*/
+    .main-content{
+        flex: 10 1 100%;
+        background:black;
+        display: flex;
+        flex-flow: column nowrap;
+
+    }
+
+    /*-------------------------------caruosel------------------------------*/
+    .slider{
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 30px;
+     }
+     
+     .slider-inner{
+         position: absolute;
+         display: grid;
+         grid-template-columns: repeat(11,5fr);
+         pointer-events: none;
+     }
+     
+     .slider-img{
+         height: 200px;
+         width: 200px;
+         margin-left:12px ;
+     }
+     .slider-item{
+         height: 200px;
+         width: 200px;
+     }
+
+     .slider-title{
+         margin-left: 13px;
+         margin-bottom: 5px;
+     }
+
+    /*-----------------------------sidebar------------------------------*/
+    .side-bar{
+        flex: 1 1 auto;
+        height: auto;
+        background-color: #333234; 
+        color: white;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+    }
+
+    .side-bar p{
+        flex: 1 1 60%;
+        margin-left: 10px;
+    }
+
+    .side-bar li{
+        text-align: justify;
+        margin-left: 15%;
+    }
+/*-----------------------------reproductor-----------------------------*/
+.footer{
+    background: #968ABB;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 80px;
+}
+
+    .player{
+        flex: 1 1 12%;
+    }
+        .play-button{
+            height:40px ;
+            width:40px ;
+        }
+
+        .song-dates{
+            margin-left: 5px;
+            display: flex;
+            flex: 1 1 auto;
+        } 
+
+        .song-names{
+            margin-left: 10px;
+        }
+
+        .sub-name{
+            font-size:13px ;
+        }
+
+
+
+
+
+
+/*
+Barra de navegacion - footer
 .flex-navbar{
     display: flex;
     flex-direction: row;
@@ -11,14 +156,14 @@ body{
     width: 99.9vw;
     justify-content: space-between;
  }
-/*Items barra de navegacion*/
+Items barra de navegacion
  .flex-items-navbar{
     display: flex;
     flex-direction: row;
     background-color: #968ABB;
     justify-content: flex-end;
  }
-/*Barra de navegacion lateral*/
+Barra de navegacion lateral
  .flex-navbar-left{
      margin-right: 0px;
     display: flex;
@@ -28,7 +173,7 @@ body{
     width: 8vw;
     float: left;
  }
-/*Tiems de navegacion lateral*/
+Tiems de navegacion lateral
  .items-navbar-left{
     font-family: 'Poppins';
     color: blanchedalmond;
@@ -39,7 +184,7 @@ body{
 }
 
 
-/*Lista de navegacion lateral*/
+Lista de navegacion lateral
 .list-navbar-left{
     padding-left: 5px;
     margin-left: 15px;
@@ -47,13 +192,13 @@ body{
     font-size: 14px;
 }
 
-/*Items barra del footer*/
+Items barra del footer
 .flex-items-footer{
     display: flex;
     flex-direction: row;
     background-color: #968ABB;
  }
-/*Items*/
+Items
  .items{
     color: blanchedalmond;
     text-align: center;
@@ -97,13 +242,13 @@ body{
     padding-top: 20px;
     transform: rotate(180deg);
 }
-/*Buscarlos en color blanco*/
+Buscarlos en color blanco
 .backPage{
     height: 30px;
     width: 30px;
     transform: rotate(180deg);
 }
-/*Buscarlos en color blanco*/
+Buscarlos en color blanco
 .nextPage{
     width: 0px;
     margin-top: 10px;
@@ -140,7 +285,7 @@ body{
     margin-left: 5px;
 }
 
-/*slider*/
+slider
 .slider{
     margin-top: 50px;
     margin-left: 190px;
@@ -161,8 +306,10 @@ body{
  .slider-img{
      height: 200px;
      width: 200px;
+     margin-left:12px ;
  }
  .slider-item{
      height: 200px;
      width: 200px;
  }
+ */

@@ -1,0 +1,112 @@
+*{
+	margin:0px;
+	padding:0px;
+    box-sizing: border-box;
+    font-family:'Poppins';;
+}
+
+
+.padre{
+	display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid black;
+}
+/*-----------------------------navbar-----------------------------*/
+.header{
+    background-color: #968ABB;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+    .logo{
+        flex: 1 1 10%;
+        
+    }
+    .logo img{
+        display: block;
+        height: 60px;
+        width: 60px;
+        margin: auto;
+    }
+    .navbar{
+        flex: 10 1 90%;
+        display: flex;
+        flex-flow: row nowrap;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .navbar img{
+        margin-right: 15px;
+        height: 30px;
+        width: 30px;
+    }
+
+/*-----------------------------contenido y sidebar-----------------------------*/
+.main-section{
+    background: black;
+    display: flex;
+}
+    /*-----------------------------contenido-----------------------------*/
+    .main-content{
+        flex: 10 1 100%;
+        background:black;
+        display: flex;
+        flex-flow: column nowrap;
+
+    }
+
+    /*caruosel*/
+    .slider{
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        margin-top: 90px;
+        margin-bottom: 30px;
+     }
+     
+     .slider-inner{
+         position: absolute;
+         display: grid;
+         grid-template-columns: repeat(11,5fr);
+         pointer-events: none;
+     }
+     
+     .slider-img{
+         height: 200px;
+         width: 200px;
+         margin-left:12px ;
+     }
+     .slider-item{
+         height: 200px;
+         width: 200px;
+     }
+
+    /*-----------------------------sidebar------------------------------*/
+    .side-bar{
+        flex: 1 1 auto;
+        height: auto;
+        background-color: #333234; 
+        color: white;
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: 0.5%;
+        align-content: flex-start;
+    }
+
+    .side-bar p{
+        flex: 1 1 60%;
+    }
+
+    .side-bar li{
+        text-align: justify;
+        margin-left: 15%;
+    }
+/*-----------------------------reproductor-----------------------------*/
+.player{
+    background: wheat;
+    border: 2px solid black; 
+}
+
+

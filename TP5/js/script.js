@@ -90,7 +90,7 @@ slider3.addEventListener('mousemove', (e)=>{
 function checklimit(slider, innerSlider){
     let outer = slider.getBoundingClientRect();
     let inner = innerSlider.getBoundingClientRect();
-    if(inner.left > document.querySelector(".flex-navbar-left").getBoundingClientRect().right){
+    if(inner.left > document.querySelector(".side-bar").getBoundingClientRect().right){
         innerSlider.style.left = '0px';
     }else if(inner.right <outer.right ){
         innerSlider.style.left = `-${inner.width - outer.width}px`;

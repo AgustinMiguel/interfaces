@@ -57,6 +57,13 @@
         z-index: 1;
     }
 
+    .search-button{
+        margin-right: 15px;
+        height: 25px;
+        width: 25px;
+        fill: white;
+    }
+
 /*-----------------------------contenido y sidebar-----------------------------*/
 .main-section{
     margin-top: 80px;
@@ -157,6 +164,7 @@
         .play-button{
             height:40px ;
             width:40px ;
+            fill: white;
             
         }
         
@@ -173,11 +181,6 @@
         .sub-name{
             font-size:13px ;
         }
-
-
-
-
-
 
 /*
 Barra de navegacion - footer

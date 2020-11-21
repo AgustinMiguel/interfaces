@@ -1,0 +1,184 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/*padre de todo*/
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 1366px;
+}
+
+
+/*header*/
+
+.header {
+    background-color: violet;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu {
+    background-color: tomato;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: teal;
+    flex: 1 1 10;
+    height: 10px;
+}
+
+.nav {
+    background-color: turquoise;
+    flex: 1 1 10;
+    height: auto;
+    display: flex;
+}
+
+.input {
+    background-color: grey;
+    flex: 1 1 auto;
+    height: 10px;
+}
+
+.avatar {
+    background-color: yellow;
+    flex: 1 1 auto;
+    height: 10px;
+}
+
+
+/*la del medio*/
+
+.principal {
+    background-color: black;
+    display: flex;
+    height: 500px;
+    /*align-items: flex-start;*/
+}
+
+.main {
+    background-color: yellowgreen;
+    flex: 1 1 80%;
+}
+
+.lateral {
+    background-color: brown;
+    flex: 1 1 auto;
+}
+
+.algo {
+    background-color: aqua;
+}
+
+
+/*reproductor o footer*/
+
+.reproductor {
+    background-color: #968ABB;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.banda {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 1%;
+    flex: 1 1 auto;
+}
+
+.imagenBanda {
+    height: 50px;
+    width: 50px;
+}
+
+.detallesBanda {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-left: 1%;
+    /*width: 180px;*/
+}
+
+.detallesBanda p {
+    font-size: 14px;
+    color: white;
+}
+
+
+/*.contenedorLike {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    flex: 1 1 auto;
+}*/
+
+.like {
+    fill: white;
+    height: 30px;
+    width: 30px;
+    margin-left: 5%;
+}
+
+.play {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    flex: 1 1 auto;
+}
+
+.backMusic {
+    fill: white;
+    height: 30px;
+    width: 30px;
+    margin-right: 5%;
+}
+
+.play-button {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+
+.nextMusic {
+    fill: white;
+    height: 30px;
+    width: 30px;
+    margin-left: 3.5%;
+}
+
+.volumen {
+    margin-right: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    flex: 1 1 auto;
+}
+
+.up {
+    height: 30px;
+    width: 30px;
+    fill: white;
+    margin-right: 10%;
+}
+
+.volumen-button {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}

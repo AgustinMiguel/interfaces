@@ -76,7 +76,7 @@
         background:black;
         display: flex;
         flex-flow: column nowrap;
-
+        margin-bottom: 100px;
     }
 
     /*-------------------------------caruosel------------------------------*/
@@ -131,6 +131,7 @@
         text-align: justify;
         margin-left: 15%;
     }
+
 /*-----------------------------reproductor-----------------------------*/
 .fixed-bot{
     position: fixed;
@@ -152,7 +153,6 @@
     align-items: center;
     height: 80px;
     align-content: space-between;
-    
 }
 
         .play-button{

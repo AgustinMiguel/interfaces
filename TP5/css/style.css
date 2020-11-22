@@ -27,6 +27,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    align-content: space-between;
     overflow: hidden;
     z-index: 1;
 }
@@ -41,8 +42,19 @@
         margin-left: 5px;
         z-index: 1;
     }
+    .browser{
+        margin-right: 5px;
+        border-radius: 100px;
+        background: #FFFFFF;
+        color: black;
+        box-shadow: none;
+        outline: none;
+        border: none;
+    }
+
+    
     .navbar{
-        flex: 10 1 90%;
+        flex: 10 1 50%;
         display: flex;
         flex-flow: row nowrap;
         flex-direction: row-reverse;

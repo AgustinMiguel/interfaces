@@ -6,10 +6,11 @@ let slider3 = document.querySelector("#slider3");
 let innerSlider3 = document.querySelector("#slider-inner3");
 let slider4 = document.querySelector("#slider4");
 let innerSlider4 = document.querySelector("#slider-inner4");
-
+let img = document.querySelector("#img");
 let pressed = false;
 let startx;
 let x;
+
 
 slider1.addEventListener('mousedown', (e)=>{
     pressed = true;
@@ -128,6 +129,7 @@ checklimit(slider1,innerSlider1);
 checklimit(slider2,innerSlider2);
 checklimit(slider3,innerSlider3);
 checklimit(slider4,innerSlider4);
+
 
 
 

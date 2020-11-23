@@ -135,38 +135,77 @@
 
 .play {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    flex-flow: column nowrap;
+    /*align-items: center;*/
     justify-content: center;
     width: 10%;
     flex: 1 1 auto;
 }
 
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
+}
+
 .backMusic {
+    display: flex;
+    align-content: flex-end;
     fill: white;
-    height: 30px;
-    width: 30px;
-    margin-right: 5%;
+    height: 20px;
+    width: 20px;
+    /* margin-right: 5%;*/
+    flex: 3 1 auto;
+    margin-top: 1%;
 }
 
 .play-button {
     height: 30px;
     width: 30px;
     fill: white;
+    flex: 1 1 auto;
+    margin-bottom: 1%;
 }
 
 .nextMusic {
+    display: flex;
+    align-content: flex-start;
     fill: white;
-    height: 30px;
-    width: 30px;
-    margin-left: 3.5%;
+    height: 20px;
+    width: 20px;
+    /* margin-left: 3.5%;*/
+    flex: 3 1 auto;
+    margin-top: 1%;
+}
+
+.slider {
+    display: flex;
+    height: auto;
+    flex: 1 1 auto;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+
+#myBar {
+    width: 300px;
+    height: 10px;
+    background-color: white;
+}
+
+.sliderMusic {
+    fill: white;
+    height: 40px;
+    width: 100px;
 }
 
 .volumen {
     margin-right: 1%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: end;
+    justify-content: flex-end;
     flex: 1 1 auto;
 }
 

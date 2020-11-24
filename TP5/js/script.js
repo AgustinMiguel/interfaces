@@ -6,10 +6,28 @@ let slider3 = document.querySelector("#slider3");
 let innerSlider3 = document.querySelector("#slider-inner3");
 let slider4 = document.querySelector("#slider4");
 let innerSlider4 = document.querySelector("#slider-inner4");
-let img = document.querySelector("#img");
+let myProgress = document.querySelector("#myProgress");
+let myBar = document.querySelector("#myBar");
+let play = document.getElementById('play')
+let pause = document.getElementById('pause');
+
 let pressed = false;
 let startx;
 let x;
+
+play.addEventListener('click', (e)=>{
+    play.style.display = 'none';
+    pause.style.display = 'initial';
+ });
+
+ pause.addEventListener('click', (e)=>{
+    pause.style.display = 'none';
+    play.style.display = 'initial';
+ });
+
+myProgress.addEventListener('click', (e)=>{
+   myBar.style.backgroundPosition = -400+e.offsetX+"px";
+});
 
 
 slider1.addEventListener('mousedown', (e)=>{

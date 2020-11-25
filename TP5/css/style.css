@@ -474,7 +474,7 @@
 
 .reproductorGrande {
     display: flex;
-    height: 80vh;
+    height: 90vh;
     width: auto;
     flex-flow: column nowrap;
     /*justify-content: center;*/
@@ -539,7 +539,7 @@
     width: 45px;
     height: 43px;
     margin-left: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .p24 {

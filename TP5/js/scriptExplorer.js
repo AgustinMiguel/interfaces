@@ -8,7 +8,19 @@ let likeNavBar = false;
 let pressed = false;
 let startx;
 let x;
+let filtersection = document.getElementById("filtersection");
+let litleup = document.getElementById("litleup");
 
+filtersection.addEventListener('mouseenter', (e)=>{
+    litleup.style.fill = '#968ABB';
+    filtersection.style.color = '#968ABB';
+
+ });
+
+ filtersection.addEventListener('mouseleave', (e)=>{
+    litleup.style.fill = 'white';
+    filtersection.style.color = 'white';
+ });
 
 
 like.addEventListener('mouseenter', (e)=>{

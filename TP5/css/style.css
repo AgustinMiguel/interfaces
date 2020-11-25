@@ -150,12 +150,8 @@
     transform: rotateX(180deg);
 }
 
-.filter-section{
+.filtersection{
     margin-bottom: 80px;
-}
-
-.filter-section:hover{
-    color: #968ABB;
 }
 
 /*-------------------------------caruosel------------------------------*/
@@ -226,6 +222,11 @@
 .bandName{
     text-align: center;
     font-size: 13px;
+}
+
+.bandName:hover{
+    color: #968ABB;
+    cursor: pointer;
 }
 
 

@@ -13,8 +13,6 @@ let pressed = false;
 let startx;
 let x;
 
-
-
 like.addEventListener('mouseenter', (e)=>{
     if(likeNavBar===false)
         like.style.fill = 'red';

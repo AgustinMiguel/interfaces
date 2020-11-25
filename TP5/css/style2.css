@@ -78,3 +78,58 @@
 
 
 /* Popup box BEGIN */
+
+.p36 {
+    font-size: 36px;
+}
+
+.p14 {
+    font-size: 14px;
+}
+
+.headerPlayList {
+    display: flex;
+    height: 80vh;
+    width: auto;
+    flex-flow: row nowrap;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.imgPlayList {
+    display: flex;
+    width: 260px;
+    height: 190px;
+    justify-content: center;
+}
+
+.textosPlayList {
+    margin-left: 20px;
+}
+
+.iconoHeaderPL {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.descargar {
+    fill: white;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+}
+
+.like2 {
+    fill: white;
+    height: 30px;
+    width: 30px;
+}
+
+.miniIconos {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    margin-right: 80px;
+}

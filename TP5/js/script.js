@@ -8,12 +8,40 @@ let slider4 = document.querySelector("#slider4");
 let innerSlider4 = document.querySelector("#slider-inner4");
 let myProgress = document.querySelector("#myProgress");
 let myBar = document.querySelector("#myBar");
-let play = document.getElementById('play')
+let img = document.getElementById('img');
+let play = document.getElementById('play');
 let pause = document.getElementById('pause');
-
+let like = document.getElementById('like');
+let likeNavBar = false;
 let pressed = false;
 let startx;
 let x;
+
+like.addEventListener('mouseenter', (e)=>{
+    if(likeNavBar===false)
+        like.style.fill = 'red';
+        else
+        like.style.fill = 'white';
+ });
+
+ like.addEventListener('mouseleave', (e)=>{
+    if(likeNavBar===false)
+        like.style.fill = 'white';
+        else
+        like.style.fill = 'red';
+ });
+
+ like.addEventListener('click', (e)=>{
+    if(likeNavBar===false){
+        like.style.fill = 'red';
+        likeNavBar = true;
+    }else{
+        like.style.fill = 'white'; 
+        likeNavBar = false;
+    }
+
+ });
+
 
 play.addEventListener('click', (e)=>{
     play.style.display = 'none';
@@ -36,12 +64,9 @@ slider1.addEventListener('mousedown', (e)=>{
     slider1.style.cursor = 'grabbing';
 });
 
-slider1.addEventListener('mouseenter', ()=>{
-    slider1.style.cursor = 'grab';
-});
 
 slider1.addEventListener('mouseup', ()=>{
-    slider1.style.cursor = 'grab';
+    slider1.style.cursor = 'initial';
 });
 
 slider1.addEventListener('mouseup', ()=>{
@@ -62,12 +87,9 @@ slider2.addEventListener('mousedown', (e)=>{
     slider2.style.cursor = 'grabbing';
 });
 
-slider2.addEventListener('mouseenter', ()=>{
-    slider2.style.cursor = 'grab';
-});
 
 slider2.addEventListener('mouseup', ()=>{
-    slider2.style.cursor = 'grab';
+    slider2.style.cursor = 'inital';
 });
 
 slider2.addEventListener('mouseup', ()=>{
@@ -88,12 +110,8 @@ slider3.addEventListener('mousedown', (e)=>{
     slider3.style.cursor = 'grabbing';
 });
 
-slider3.addEventListener('mouseenter', ()=>{
-    slider3.style.cursor = 'grab';
-});
-
 slider3.addEventListener('mouseup', ()=>{
-    slider3.style.cursor = 'grab';
+    slider3.style.cursor = 'initial';
 });
 
 slider3.addEventListener('mouseup', ()=>{
@@ -114,12 +132,9 @@ slider4.addEventListener('mousedown', (e)=>{
     slider4.style.cursor = 'grabbing';
 });
 
-slider4.addEventListener('mouseenter', ()=>{
-    slider4.style.cursor = 'grab';
-});
 
 slider4.addEventListener('mouseup', ()=>{
-    slider4.style.cursor = 'grab';
+    slider4.style.cursor = 'initial';
 });
 
 slider4.addEventListener('mouseup', ()=>{

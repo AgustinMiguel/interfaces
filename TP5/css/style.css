@@ -149,19 +149,40 @@
 }
 
 .slider-img {
+    pointer-events: none;
     height: 200px;
     width: 200px;
     margin-left: 12px;
 }
 
+.slider-img2 {
+    height: 200px;
+    width: 200px;
+    margin-left: 12px;
+}
+
+.slider-img2:hover {
+    transform: scale(1.1);
+}
+
 .slider-item {
+    display: inline-block;
     height: 200px;
     width: 200px;
 }
 
 .slider-title {
     margin-left: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.playListName{
+    font-size: 13px;
+}
+
+.playListName:hover{
+    color: #968ABB;
+    cursor: pointer;
 }
 
 
@@ -191,6 +212,10 @@
 #side-bar-text:hover {
     color: #968ABB;
     cursor: pointer;
+}
+
+.margin-top{
+    margin-top: 20px;
 }
 
 

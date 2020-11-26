@@ -71,6 +71,12 @@
     /*font-weight: bold;*/
 }
 
+.trigger_popup_fricc2 {
+    cursor: pointer;
+    display: inline-block;
+    /*font-weight: bold;*/
+}
+
 .trigger_popup_fricc:hover {
     background-color: #968ABB;
     color: black;
@@ -89,7 +95,7 @@
 
 .headerPlayList {
     display: flex;
-    height: 80vh;
+    /*height: 80vh;*/
     width: auto;
     flex-flow: row nowrap;
     margin-top: 30px;
@@ -105,13 +111,14 @@
 
 .textosPlayList {
     margin-left: 20px;
+    height: 190px;
 }
 
 .iconoHeaderPL {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .descargar {
@@ -132,4 +139,77 @@
     flex: 1 1 auto;
     justify-content: flex-end;
     margin-right: 80px;
+    height: 190px;
+}
+
+.listaResultados {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    margin-left: 60px;
+}
+
+.tituloLista {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 50px;
+    margin-right: 80px;
+}
+
+.cancion {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 20px;
+    margin-right: 80px;
+    background-color: #333234;
+}
+
+.cancion:hover {
+    background-color: #968ABB;
+    color: black;
+    /*ESTO NO FUNCA*/
+}
+
+.itemCancion {
+    display: flex;
+    flex: 1 1 auto;
+    width: 265px;
+}
+
+.iconosLista {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.like3 {
+    fill: white;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.play-button2 {
+    fill: white;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
+
+.magic2 {
+    display: flex;
+    width: 55px;
+}
+
+.menuPuntos2 {
+    display: flex;
+    fill: white;
+    height: 20px;
+    width: 20px;
+}
+
+.magic3 {
+    display: flex;
+    width: 27px;
 }

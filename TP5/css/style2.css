@@ -213,3 +213,14 @@
     display: flex;
     width: 27px;
 }
+
+.itemCancionRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /*width: 530px;*/
+}
+
+.space {
+    width: 265px;
+}

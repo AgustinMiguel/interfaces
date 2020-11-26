@@ -48,6 +48,7 @@ like.addEventListener('mouseenter', (e)=>{
  pause.addEventListener('click', (e)=>{
     pause.style.display = 'none';
     play.style.display = 'initial';
+    myBar.style.animation = "timer 99999999999999999999999999999s";
  });
 
 myProgress.addEventListener('click', (e)=>{

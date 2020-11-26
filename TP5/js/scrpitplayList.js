@@ -1,4 +1,4 @@
-console.log("cacacacacacaa");
+
 let myProgress = document.querySelector("#myProgress");
 let myBar = document.querySelector("#myBar");
 let play1 = document.getElementById('play1');

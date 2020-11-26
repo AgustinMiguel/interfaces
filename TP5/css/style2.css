@@ -173,11 +173,12 @@
     background-color: #141414;
 }
 
-.cancion:hover {
+
+/*.cancion:hover {
     background-color: #968ABB;
     color: black;
-    /*ESTO NO FUNCA*/
-}
+    /*ESTO NO FUNCA
+}*/
 
 .itemCancion {
     display: flex;
@@ -232,6 +233,14 @@
 
 .space {
     width: 265px;
+}
+
+.hoverCancion {
+    background-color: #968ABB;
+}
+
+.svgBlack {
+    fill: black;
 }
 
 

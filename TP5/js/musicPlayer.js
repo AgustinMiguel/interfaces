@@ -25,7 +25,6 @@ let play = document.getElementById('play');
 let pause = document.getElementById('pause');
 let like = document.getElementById('like');
 let likeNavBar = false;
-let pressed = false;
 let star1 = document.getElementById('star1');
 let star2 = document.getElementById('star2');
 let star3 = document.getElementById('star3');

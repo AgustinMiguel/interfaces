@@ -8,8 +8,7 @@ $(document).ready(function() {
     let like1 = document.getElementById('like1');
     let like2 = document.getElementById('like2');
     let likeNavBar = false;
-    likeHeaderBar = false;
-    let pressed = false;
+    let likeHeaderBar = false;
     let up = document.getElementById("up");
     let sidebartext = document.getElementById("side-bar-text");
     let backarrow = document.getElementById("back-arrow");

@@ -9,7 +9,6 @@ let play = document.getElementById('play');
 let pause = document.getElementById('pause');
 let like = document.getElementById('like');
 let likeNavBar = false;
-let pressed = false;
 let startx;
 let x;
 let up = document.getElementById("up");

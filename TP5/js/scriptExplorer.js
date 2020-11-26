@@ -5,7 +5,6 @@ let play1 = document.getElementById('play1');
 let pause = document.getElementById('pause');
 let like1 = document.getElementById('like1');
 let likeNavBar = false;
-let pressed = false;
 let startx;
 let x;
 let filtersection = document.getElementById("filtersection");

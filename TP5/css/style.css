@@ -117,6 +117,8 @@
     display: flex;
     flex-flow: column nowrap;
     margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .search-content{
@@ -435,7 +437,6 @@
             background-repeat: no-repeat;
             background-image: url(../img/fonto-timer.png);
             background-position: -400px;
-            animation: timer 120s;
         }
 
         @keyframes timer{

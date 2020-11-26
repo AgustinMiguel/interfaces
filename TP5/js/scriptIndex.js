@@ -39,9 +39,10 @@ like.addEventListener('mouseenter', (e)=>{
  });
 
 
-play.addEventListener('click', (e)=>{
+ play.addEventListener('click', (e)=>{
     play.style.display = 'none';
     pause.style.display = 'initial';
+    myBar.style.animation = "timer 120s";
  });
 
  pause.addEventListener('click', (e)=>{

@@ -12,6 +12,16 @@ let likeNavBar = false;
 let pressed = false;
 let startx;
 let x;
+let up = document.getElementById("up");
+let sidebartext = document.getElementById("side-bar-text");
+
+sidebartext.addEventListener('click', (e)=>{
+    window.location.href = 'index.html';
+ });
+ 
+ up.addEventListener('click', (e)=>{
+    window.location.href = 'musicPlayer.html';
+ });
 
 like.addEventListener('mouseenter', (e)=>{
     if(likeNavBar===false)

@@ -33,6 +33,12 @@ let star4 = document.getElementById('star4');
 let star5 = document.getElementById('star5');
 let voted = false;
 let bandName = document.getElementById('bandName');
+let up = document.getElementById("up-rotate");
+
+up.addEventListener('click', (e)=>{
+   window.location.href = 'index.html';
+});
+
 
 bandName.addEventListener('mouseenter', (e)=>{
     bandName.style.color = "#968ABB";

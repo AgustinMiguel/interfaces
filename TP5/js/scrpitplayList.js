@@ -8,6 +8,21 @@ let like2 = document.getElementById('like2');
 let likeNavBar = false;
 likeHeaderBar = false;
 let pressed = false;
+let up = document.getElementById("up");
+let sidebartext = document.getElementById("side-bar-text");
+let backarrow = document.getElementById("back-arrow");
+
+backarrow.addEventListener('click', (e)=>{
+   window.location.href = 'index.html';
+});
+
+sidebartext.addEventListener('click', (e)=>{
+    window.location.href = 'index.html';
+ });
+ 
+ up.addEventListener('click', (e)=>{
+    window.location.href = 'musicPlayer.html';
+ });
 
 like1.addEventListener('mouseenter', (e)=>{
     if(likeNavBar===false)

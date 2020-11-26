@@ -142,6 +142,9 @@
     height: 190px;
 }
 
+
+/*----------------aca arranca la lista de resultados-------------*/
+
 .listaResultados {
     display: flex;
     flex-flow: column nowrap;
@@ -149,12 +152,18 @@
     margin-left: 60px;
 }
 
+
+/*----------------la cabecera de la tabla-------------*/
+
 .tituloLista {
     display: flex;
     flex-flow: row nowrap;
     margin-top: 50px;
     margin-right: 80px;
 }
+
+
+/*----------------cada cancion-------------*/
 
 .cancion {
     display: flex;
@@ -224,3 +233,6 @@
 .space {
     width: 265px;
 }
+
+
+/*----------------aca termina la lista de resultados-------------*/

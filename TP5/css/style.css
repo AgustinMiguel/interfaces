@@ -137,7 +137,7 @@
 }
 
 .search-content{
-    margin-top: 50px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -547,6 +547,9 @@
             color:#968ABB ;
         }
 
+        .margin-bottom-resultados{
+            margin-bottom: 80px;
+        }
         
 /*-----------------------------------------------------Player-------------------------------*/
 

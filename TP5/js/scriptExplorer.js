@@ -79,15 +79,37 @@ myProgress.addEventListener('click', (e)=>{
 });
 
 
+let canciones = document.querySelectorAll(".cancion");
+for (let i = 0; i < canciones.length; i++) {
+   canciones[i].addEventListener("mouseenter", function() {
+       this.classList.toggle("hoverCancion");
+       let like = document.getElementById('likeCancion' + (i + 1));
+       let play = document.getElementById('playCancion' + (i + 1));
+       //let texto = document.querySelectorAll('#texto' + (i + 1));
+       let puntos = document.querySelector('#puntos' + (i + 1));
+       like.classList.toggle("svgBlack");
+       play.classList.toggle("svgBlack");
+       puntos.classList.toggle("puntosNegro");
 
+       /*for (let i = 0; i < texto.length; i++) {
+           texto[i].classList.toggle("textoNegro");
+       }*/
+   }); 
+}
 
+for (let i = 0; i < canciones.length; i++) {
+   canciones[i].addEventListener("mouseleave", function() {
+       this.classList.toggle("hoverCancion");
+       let like = document.getElementById('likeCancion' + (i + 1));
+       let play = document.getElementById('playCancion' + (i + 1));
+       //let texto = document.querySelectorAll('#texto' + (i + 1));
+       let puntos = document.querySelector('#puntos' + (i + 1));
+       like.classList.toggle("svgBlack");
+       play.classList.toggle("svgBlack");
+       puntos.classList.toggle("puntosNegro");
 
-
-
-
-
-
-
-
-
-
+       /*for (let i = 0; i < texto.length; i++) {
+           texto[i].classList.toggle("textoNegro");
+       }*/
+   });
+}

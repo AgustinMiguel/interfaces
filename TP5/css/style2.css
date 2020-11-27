@@ -137,11 +137,41 @@
 .miniIconos {
     display: flex;
     flex: 1 1 auto;
-    justify-content: flex-end;
+    flex-flow: column nowrap;
+    align-items: flex-end;
     margin-right: 80px;
     height: 190px;
 }
 
+.miniIcono1{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.miniIcono2{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.p20{
+    font-size: 20px;
+}
+
+.like4{
+    fill: white;
+    height: 15px;
+    width: 20px;
+    margin-left: 5px;
+}
+
+.volumen-button2{
+    fill: white;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
 
 /*----------------aca arranca la lista de resultados-------------*/
 

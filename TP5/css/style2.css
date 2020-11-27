@@ -32,7 +32,7 @@
     box-shadow: 10px 10px 60px #555;
     display: inline-block;
     height: auto;
-    max-width: 551px;
+    max-width: 350px;
     min-height: 100px;
     vertical-align: middle;
     width: 60%;
@@ -143,35 +143,36 @@
     height: 190px;
 }
 
-.miniIcono1{
+.miniIcono1 {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.miniIcono2{
+.miniIcono2 {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.p20{
+.p20 {
     font-size: 20px;
 }
 
-.like4{
+.like4 {
     fill: white;
     height: 15px;
     width: 20px;
     margin-left: 5px;
 }
 
-.volumen-button2{
+.volumen-button2 {
     fill: white;
     width: 20px;
     height: 20px;
     margin-left: 5px;
 }
+
 
 /*----------------aca arranca la lista de resultados-------------*/
 
@@ -273,11 +274,36 @@
     fill: white;
 }
 
-.textoNegro{
+.textoNegro {
     color: white;
 }
 
-.puntosNegro{
+.puntosNegro {
     fill: white;
 }
+
+
 /*----------------aca termina la lista de resultados-------------*/
+
+.verde {
+    background-color: #85C076;
+    margin-top: 10px;
+}
+
+.popFlexFather {
+    display: flex;
+}
+
+.popFlex {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.starVote2 {
+    fill: white;
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    align-items: center;
+    /*margin-bottom: 10px;*/
+}

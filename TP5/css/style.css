@@ -224,8 +224,8 @@ a{
 }
 
 .slider-img2-artist{
-    height: 200px;
-    width: 200px;
+    height: auto;
+    width: auto;
     margin-left: 20px;
 }
 
@@ -257,6 +257,10 @@ a{
 
 
 @media (min-width: 860px){
+    .playListName:hover {
+        color: #968ABB;
+        cursor: pointer;
+    }
     .slider-item-artist{
         border-radius: 100px;
         display: inline-block;
@@ -291,7 +295,6 @@ a{
     }
 
     .slider-img2 {
-        pointer-events: none;
         height: 200px;
         width: 200px;
         margin-left: 20px;

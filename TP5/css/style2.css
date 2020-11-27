@@ -102,6 +102,27 @@
     margin-left: 20px;
 }
 
+
+/*@media ( max-width: 1470px) {
+    .headerPlayList {
+        display: flex;
+        /*height: 80vh;*/
+
+
+/*width: auto;
+        flex-flow: column wrap;
+        margin-top: 30px;
+        margin-left: 20px;
+        align-items: center;
+    }
+    .imgPlayList {
+        display: flex;
+        width: 300px;
+        height: 230px;
+        justify-content: center;
+    }
+}*/
+
 .imgPlayList {
     display: flex;
     width: 260px;
@@ -209,6 +230,34 @@
     background-color: #968ABB;
     color: black;
     /*ESTO NO FUNCA
+}*/
+
+
+/*@media ( max-width: 1470px) {
+    .cancion {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 20px;
+        margin-right: 80px;
+        background-color: #141414;
+        max-width: 90%;
+    }
+    .itemCancion {
+        display: flex;
+        flex: 1 1 auto;
+        width: 265px;
+        max-width: 10%;
+    }
+    .itemCancionRow {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        /*width: 530px;*/
+
+
+/*max-width: 40%;
+
+}
 }*/
 
 .itemCancion {

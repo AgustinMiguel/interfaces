@@ -16,8 +16,6 @@ $(document).ready(function() {
 });
 //POPUP//
 
-
-
 let myProgress = document.querySelector("#myProgress");
 let myBar = document.querySelector("#myBar");
 let img = document.getElementById('img');

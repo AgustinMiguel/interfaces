@@ -195,6 +195,26 @@ a{
     margin-bottom: 80px;
 }
 
+.browser-mobile{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-mobile{
+    width: 176px;
+    height: 170px;
+}
+
+.button-mobile{
+    margin-top: 5px;
+    background: #968ABB;
+    border-radius: 4px; 
+    color: black;
+    padding: 5px;
+}
+
 /*-------------------------------caruosel------------------------------*/
 
 
@@ -257,6 +277,12 @@ a{
 
 
 @media (min-width: 860px){
+    .browser-mobile{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .playListName:hover {
         color: #968ABB;
         cursor: pointer;
@@ -302,6 +328,13 @@ a{
 }
 
 @media (max-width: 860px){
+    .browser-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .slider-item-artist{
         border-radius: 100px;
         display: inline-block;

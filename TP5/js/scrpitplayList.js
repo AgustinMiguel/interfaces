@@ -101,15 +101,15 @@ $(document).ready(function() {
             this.classList.toggle("hoverCancion");
             let like = document.getElementById('likeCancion' + (i + 1));
             let play = document.getElementById('playCancion' + (i + 1));
-            let texto = document.querySelectorAll('#texto' + (i + 1));
+            //let texto = document.querySelectorAll('#texto' + (i + 1));
             let puntos = document.querySelector('#puntos' + (i + 1));
             like.classList.toggle("svgBlack");
             play.classList.toggle("svgBlack");
             puntos.classList.toggle("puntosNegro");
 
-            for (let i = 0; i < texto.length; i++) {
+            /*for (let i = 0; i < texto.length; i++) {
                 texto[i].classList.toggle("textoNegro");
-            }
+            }*/
         }); 
     }
 
@@ -118,15 +118,15 @@ $(document).ready(function() {
             this.classList.toggle("hoverCancion");
             let like = document.getElementById('likeCancion' + (i + 1));
             let play = document.getElementById('playCancion' + (i + 1));
-            let texto = document.querySelectorAll('#texto' + (i + 1));
+            //let texto = document.querySelectorAll('#texto' + (i + 1));
             let puntos = document.querySelector('#puntos' + (i + 1));
             like.classList.toggle("svgBlack");
             play.classList.toggle("svgBlack");
             puntos.classList.toggle("puntosNegro");
 
-            for (let i = 0; i < texto.length; i++) {
+            /*for (let i = 0; i < texto.length; i++) {
                 texto[i].classList.toggle("textoNegro");
-            }
+            }*/
         });
     }
 

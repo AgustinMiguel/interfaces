@@ -14,11 +14,11 @@ let sidebartext = document.getElementById("side-bar-text");
 let backarrow = document.getElementById("back-arrow");
 
 backarrow.addEventListener('click', (e)=>{
-   window.location.href = 'index.html';
+   window.location.href = 'home.html';
 });
 
 sidebartext.addEventListener('click', (e)=>{
-   window.location.href = 'index.html';
+   window.location.href = 'home.html';
 });
 
 up.addEventListener('click', (e)=>{

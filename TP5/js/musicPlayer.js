@@ -33,7 +33,7 @@ let bandName = document.getElementById('bandName');
 let up = document.getElementById("up-rotate");
 
 up.addEventListener('click', (e)=>{
-   window.location.href = 'index.html';
+   window.location.href = 'home.html';
 });
 
 

@@ -16,7 +16,7 @@ let up = document.getElementById("up");
 let sidebartext = document.getElementById("side-bar-text");
 
 sidebartext.addEventListener('click', (e)=>{
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
  });
  
  up.addEventListener('click', (e)=>{

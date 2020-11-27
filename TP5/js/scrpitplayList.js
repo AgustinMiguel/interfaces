@@ -14,11 +14,11 @@ $(document).ready(function() {
     let backarrow = document.getElementById("back-arrow");
 
     backarrow.addEventListener('click', (e) => {
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
     });
 
     sidebartext.addEventListener('click', (e) => {
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
     });
 
     up.addEventListener('click', (e) => {
@@ -52,25 +52,25 @@ $(document).ready(function() {
 
 
     like2.addEventListener('mouseenter', (e) => {
-        if (likeNavBar === false)
+        if (likeHeaderBar === false)
             like2.style.fill = 'red';
         else
             like2.style.fill = 'white';
     });
 
     like2.addEventListener('mouseleave', (e) => {
-        if (likeNavBar === false)
+        if (likeHeaderBar === false)
             like2.style.fill = 'white';
         else
             like2.style.fill = 'red';
     });
 
     like2.addEventListener('click', (e) => {
-        if (likeNavBar === false) {
+        if (likeHeaderBar === false) {
             like2.style.fill = 'red';
             likeHeaderBar = true;
         } else {
-            like.style.fill = 'white';
+            like2.style.fill = 'white';
             likeHeaderBar = false;
         }
 

@@ -119,6 +119,25 @@ a{
     fill: white;
 }
 
+@media (min-width: 860px){
+    .browser {
+        margin-right: 5px;
+        border-radius: 100px;
+        background: #FFFFFF;
+        color: black;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        width: 200px;
+    }
+}
+
+@media (max-width: 860px){
+    .browser {
+        display: none;
+    }
+}
+
 
 /*-----------------------------contenido y sidebar-----------------------------*/
 
@@ -178,12 +197,7 @@ a{
 
 /*-------------------------------caruosel------------------------------*/
 
-.slider {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    margin-top: 10px;
-}
+
 
 .slider-inner {
     position: absolute;
@@ -191,12 +205,7 @@ a{
     grid-template-columns: repeat(11, 5fr);
 }
 
-.slider-img {
-    pointer-events: none;
-    height: 200px;
-    width: 200px;
-    margin-left: 20px;
-}
+
 
 .slider-img2 {
     height: 200px;
@@ -234,12 +243,7 @@ a{
     cursor: pointer;
 }
 
-.slider-item-artist{
-    border-radius: 100px;
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-}
+
 
 .bandName{
     text-align: center;
@@ -249,6 +253,96 @@ a{
 .bandName:hover{
     color: #968ABB;
     cursor: pointer;
+}
+
+
+@media (min-width: 860px){
+    .slider-item-artist{
+        border-radius: 100px;
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+    }
+
+    .slider {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .slider-item {
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+    }
+    
+    .slider-img2-artist{
+        height: 200px;
+        width: 200px;
+        margin-left: 20px;
+    }
+
+    .slider-img {
+        pointer-events: none;
+        height: 200px;
+        width: 200px;
+        margin-left: 20px;
+    }
+
+    .slider-img2 {
+        pointer-events: none;
+        height: 200px;
+        width: 200px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 860px){
+    .slider-item-artist{
+        border-radius: 100px;
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+    }
+    .slider-item-artist{
+        border-radius: 100px;
+        display: inline-block;
+        height: 150px;
+        width: 148px;
+    }
+    .slider {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .slider-item {
+        display: inline-block;
+        height: 150px;
+        width: 148px;
+    }
+    
+    .slider-img2-artist{
+        height: 150px;
+        width: 148px;
+        margin-left: 20px;
+    }
+    .slider-img {
+        pointer-events: none;
+        height: 150px;
+        width: 148px;
+        margin-left: 20px;
+    }
+    
+    .slider-img2 {
+        pointer-events: none;
+        height: 150px;
+        width: 148px;
+        margin-left: 20px;
+    }
 }
 
 /*-----------------------------sidebar------------------------------*/
@@ -280,6 +374,37 @@ a{
 
 .margin-top {
     margin-top: 20px;
+}
+
+@media (min-width: 860px){
+    .browser {
+        margin-right: 5px;
+        border-radius: 100px;
+        background: #FFFFFF;
+        color: black;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        width: 200px;
+    }
+}
+
+@media (min-width: 860px){
+    .side-bar {
+        flex: 1 1 auto;
+        height: auto;
+        background-color: #333234;
+        color: white;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+    }
+}
+
+@media (max-width: 860px){
+    .side-bar {
+        display: none;
+    }
 }
 
 
@@ -494,9 +619,8 @@ a{
             .song-dates{
                 margin-left: 5px;
                 display: flex;
-                flex: 1 1 50%;
+                flex: 1 1 450px;
                 align-items: center;
-                overflow: hidden;
             } 
 
             .player-container {
@@ -504,7 +628,8 @@ a{
                 flex-flow: column nowrap;
                 align-items: center;
                 justify-content: center;
-                flex: 1 1 5%;
+                flex: 1 1 auto;
+                width: 300px;
             }
            
             #myProgress {

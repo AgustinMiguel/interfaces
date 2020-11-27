@@ -365,7 +365,7 @@ a{
             fill: white;
             height: 30px;
             width: 30px;
-            margin-left: 5%;
+            margin-left: 5px;
         }
 
         .play {
@@ -496,6 +496,7 @@ a{
                 display: flex;
                 flex: 1 1 50%;
                 align-items: center;
+                overflow: hidden;
             } 
 
             .player-container {
@@ -503,7 +504,7 @@ a{
                 flex-flow: column nowrap;
                 align-items: center;
                 justify-content: center;
-                flex: 1 1 auto;
+                flex: 1 1 5%;
             }
            
             #myProgress {
